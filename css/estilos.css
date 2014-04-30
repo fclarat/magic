@@ -1,0 +1,193 @@
+.cartaMano {
+	height: 190px;
+	width: 130px;
+}
+
+.cartaManoRival {
+	height: 190px;
+	width: 130px;
+}
+
+.cartaManoMazo {
+	height: 190px;
+	width: 130px;
+}
+
+.cartaManoMazoRival {
+	height: 190px;
+	width: 130px;
+}
+
+.cartaCementerio {
+	height: 190px;
+	width: 130px;
+}
+
+.cartaCementerioChica {
+	height: 60px;
+}
+
+.cartaMesa {
+	height: 90px;
+	width: 65px;
+}
+
+.cartaMesa-contrario {
+	position: relative;
+	top: -250px;
+}
+
+.cartaMesaGirada {
+	height: 90px;
+	width: 65px;
+}
+
+/*
+.cartaMesa:hover{
+	height: 80%;
+	z-index: 5;
+}*/
+#sectorSuperior {
+	height: 500px;
+	width: 100%;
+	background-image: url('../images/fondomesa.png');
+}
+
+#mesa {
+	height: 250px;
+	width: 75%;
+}
+
+#mesa-contrario {
+	height: 250px;
+	width: 75%;
+}
+
+#cartaZoom {
+	position: absolute;
+	height: 500px;
+	width: 25%;
+	right: 10px;
+	top: 10px;
+}
+
+#mano {
+	height: 200px;
+	width: 75%;
+	float: left;
+}
+
+#mazo {
+	float: left;
+	height: 190px;
+	width: 130px;
+}
+
+#cementerio {
+	float: left;
+	height: 190px;
+	width: 130px;
+	background-color: #333333;
+}
+
+#sectorInferiorIzq {
+	height: 200px;
+	width: 25%;
+	float: left;
+}
+
+#manoRival {
+	height: 200px;
+	width: 75%;
+	float: left;
+}
+
+#mazoRival {
+	float: left;
+	height: 190px;
+	width: 130px;
+}
+
+#cementerioRival {
+	float: left;
+	height: 190px;
+	width: 130px;
+	background-color: #333333;
+}
+
+#sectorInferiorIzqRival {
+	height: 200px;
+	width: 25%;
+	float: left;
+}
+
+#sectorInferior {
+	display: block;
+	width: 100%;
+	padding-top: 1%;
+}
+
+.drag {
+	position: absolute;
+	cursor: move;
+}
+
+.contador {
+	float: right;
+	height: 30px;
+}
+
+.titcont {
+	margin: 0px;
+	width: 10px;
+	float: left;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.contenedorContadores {
+	display: none;
+	height: 140px;
+	width: 100px;
+	position: relative;
+	top: 100px;
+	left: 100px;
+}
+
+.contenedorContadoresInterno {
+	width: 100px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.contadorVidas{
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px;	
+	border: 0px solid #999;
+	border-left: none;
+	margin-bottom: -1px;	
+	position: relative;	
+	width: 100px;
+}
+.botonesMenu{
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px;	
+	border: 0px solid #999;
+	border-left: none;
+	margin-bottom: -1px;	
+	position: relative;	
+	width: 250px;
+}
+.flechaVida{
+	height: 13px;
+	float: right;
+}
+.cantidadVidas{
+	width: 20px;
+	margin-left: 20px;
+}

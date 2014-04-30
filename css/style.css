@@ -1,0 +1,353 @@
+.hmenu {
+	BORDER-BOTTOM: #ccc 1px outset;
+	POSITION: absolute;
+	BORDER-LEFT: #ccc 1px outset;
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #ddd;
+	LIST-STYLE-TYPE: none;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH: 150px;
+	PADDING-RIGHT: 0px;
+	COLOR: black;
+	BORDER-TOP: #ccc 1px outset;
+	TOP: 0px;
+	BORDER-RIGHT: #ccc 1px outset;
+	PADDING-TOP: 0px;
+	LEFT: 0px
+}
+
+.vmenu {
+	BORDER-BOTTOM: #ccc 1px outset;
+	POSITION: absolute;
+	BORDER-LEFT: #ccc 1px outset;
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #ddd;
+	LIST-STYLE-TYPE: none;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH: 250px;
+	PADDING-RIGHT: 0px;
+	COLOR: black;
+	BORDER-TOP: #ccc 1px outset;
+	TOP: 0px;
+	BORDER-RIGHT: #ccc 1px outset;
+	PADDING-TOP: 0px;
+	LEFT: 0px;
+	z-index: 10;
+}
+
+.hmenu UL {
+	BORDER-BOTTOM: #ccc 1px outset;
+	POSITION: absolute;
+	BORDER-LEFT: #ccc 1px outset;
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #ddd;
+	LIST-STYLE-TYPE: none;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH: 150px;
+	PADDING-RIGHT: 0px;
+	COLOR: black;
+	BORDER-TOP: #ccc 1px outset;
+	TOP: 0px;
+	BORDER-RIGHT: #ccc 1px outset;
+	PADDING-TOP: 0px;
+	LEFT: 0px
+}
+
+.vmenu UL {
+	BORDER-BOTTOM: #ccc 1px outset;
+	POSITION: absolute;
+	BORDER-LEFT: #ccc 1px outset;
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #ddd;
+	LIST-STYLE-TYPE: none;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH: 200px;
+	PADDING-RIGHT: 0px;
+	COLOR: black;
+	BORDER-TOP: #ccc 1px outset;
+	TOP: 0px;
+	BORDER-RIGHT: #ccc 1px outset;
+	PADDING-TOP: 0px;
+	LEFT: 0px;
+	z-index: 10;
+}
+
+.hmenu {
+	BORDER-LEFT: 0px;
+	WIDTH: 100%;
+	BORDER-RIGHT: 0px
+}
+
+.hmenu LI LI {
+	PADDING-BOTTOM: 9px;
+	MARGIN: 0px;
+	PADDING-LEFT: 24px;
+	PADDING-RIGHT: 16px;
+	DISPLAY: block;
+	PADDING-TOP: 9px
+}
+
+.vmenu LI {
+	PADDING-BOTTOM: 9px;
+	MARGIN: 0px;
+	PADDING-LEFT: 24px;
+	PADDING-RIGHT: 16px;
+	DISPLAY: block;
+	PADDING-TOP: 9px;
+	z-index: 10;
+}
+
+.hmenu UL A {
+	PADDING-BOTTOM: 9px;
+	MARGIN: 0px;
+	PADDING-LEFT: 24px;
+	PADDING-RIGHT: 16px;
+	DISPLAY: block;
+	PADDING-TOP: 9px
+}
+
+.vmenu A {
+	PADDING-BOTTOM: 9px;
+	MARGIN: 0px;
+	PADDING-LEFT: 24px;
+	PADDING-RIGHT: 16px;
+	DISPLAY: block;
+	PADDING-TOP: 9px
+}
+
+.hmenu A {
+	FONT-FAMILY: inherit;
+	COLOR: inherit;
+	FONT-SIZE: inherit;
+	CURSOR: inherit;
+	TEXT-DECORATION: none
+}
+
+.vmenu A {
+	FONT-FAMILY: inherit;
+	COLOR: inherit;
+	FONT-SIZE: inherit;
+	CURSOR: inherit;
+	TEXT-DECORATION: none
+}
+
+.hmenu UL A {
+	POSITION: absolute;
+	BOTTOM: 0px;
+	TOP: 0px;
+	RIGHT: 0px;
+	LEFT: 0px
+}
+
+.vmenu A {
+	POSITION: absolute;
+	BOTTOM: 0px;
+	TOP: 0px;
+	RIGHT: 0px;
+	LEFT: 0px
+}
+
+.hmenu LI {
+	POSITION: relative;
+	BACKGROUND-REPEAT: no-repeat;
+	FONT-FAMILY: "Verdana", sans-serif;
+	BACKGROUND-POSITION: 4px 10px;
+	HEIGHT: 1.2em;
+	COLOR: black;
+	FONT-SIZE: 14px;
+	CURSOR: default
+}
+
+.vmenu LI {
+	POSITION: relative;
+	BACKGROUND-REPEAT: no-repeat;
+	FONT-FAMILY: "Verdana", sans-serif;
+	BACKGROUND-POSITION: 4px 10px;
+	HEIGHT: 1.2em;
+	COLOR: black;
+	FONT-SIZE: 14px;
+	CURSOR: default
+}
+
+.contextmenuarea {
+	CURSOR: default
+}
+
+.contextmenuarea * {
+	CURSOR: default
+}
+
+.hmenu>LI {
+	PADDING-BOTTOM: 2px;
+	MARGIN: 2px;
+	PADDING-LEFT: 4px;
+	PADDING-RIGHT: 4px;
+	FLOAT: left;
+	PADDING-TOP: 2px
+}
+
+.vmenu LI>UL:before {
+	Z-INDEX: 2000;
+	POSITION: absolute;
+	WIDTH: 12px;
+	DISPLAY: block;
+	HEIGHT: 14px;
+	FONT-SIZE: 10px;
+	CONTENT: '>';
+	TOP: 10px;
+	FONT-WEIGHT: bold;
+	LEFT: -12px
+}
+
+.hmenu LI>UL>LI>UL:before {
+	Z-INDEX: 2000;
+	POSITION: absolute;
+	WIDTH: 12px;
+	DISPLAY: block;
+	HEIGHT: 14px;
+	FONT-SIZE: 10px;
+	CONTENT: '>';
+	TOP: 10px;
+	FONT-WEIGHT: bold;
+	LEFT: -12px
+}
+
+.hmenu>LI {
+	BORDER-BOTTOM: transparent 1px outset;
+	BORDER-LEFT: transparent 1px outset;
+	BORDER-TOP: transparent 1px outset;
+	BORDER-RIGHT: transparent 1px outset
+}
+
+.hmenu>LI:hover {
+	BORDER-BOTTOM-COLOR: #666;
+	BORDER-TOP-COLOR: #666;
+	BORDER-RIGHT-COLOR: #666;
+	BORDER-LEFT-COLOR: #666
+}
+
+.hmenu>LI.disabled:hover {
+	BORDER-BOTTOM-COLOR: transparent;
+	BORDER-TOP-COLOR: transparent;
+	BORDER-RIGHT-COLOR: transparent;
+	BORDER-LEFT-COLOR: transparent
+}
+
+.vmenu LI>UL {
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px
+}
+
+.hmenu LI>UL {
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px
+}
+
+.vmenu LI:hover>UL {
+	BORDER-RIGHT-WIDTH: 1px;
+	BORDER-TOP-WIDTH: 1px;
+	BORDER-BOTTOM-WIDTH: 1px;
+	BORDER-LEFT-WIDTH: 1px
+}
+
+.hmenu LI:hover>UL {
+	BORDER-RIGHT-WIDTH: 1px;
+	BORDER-TOP-WIDTH: 1px;
+	BORDER-BOTTOM-WIDTH: 1px;
+	BORDER-LEFT-WIDTH: 1px
+}
+
+.vmenu LI:hover>UL:before {
+	COLOR: white
+}
+
+.hmenu LI>UL>LI:hover>UL:before {
+	COLOR: white
+}
+
+.hmenu UL {
+	TOP: 100%;
+	LEFT: -3px
+}
+
+.hmenu UL UL {
+	TOP: 0px;
+	LEFT: 99%
+}
+
+.vmenu UL {
+	TOP: 0px;
+	LEFT: 99%
+}
+
+.hmenu LI.disabled UL {
+	DISPLAY: none
+}
+
+.vmenu LI.disabled UL {
+	DISPLAY: none
+}
+
+.hmenu LI>UL>LI {
+	DISPLAY: none
+}
+
+.vmenu LI>UL>LI {
+	DISPLAY: none
+}
+
+.contextmenuarea>.vmenu {
+	DISPLAY: none
+}
+
+.contextmenuarea+.vmenu {
+	DISPLAY: none
+}
+
+.hmenu LI:hover>UL>LI {
+	DISPLAY: block
+}
+
+.vmenu LI:hover>UL>LI {
+	DISPLAY: block
+}
+
+.hmenu LI LI:hover {
+	BACKGROUND-COLOR: #0a246a;
+	COLOR: white
+}
+
+.vmenu LI:hover {
+	BACKGROUND-COLOR: #0a246a;
+	COLOR: white
+}
+
+.hmenu .disabled {
+	BACKGROUND-COLOR: transparent !important;
+	COLOR: #999 !important
+}
+
+.vmenu .disabled {
+	BACKGROUND-COLOR: transparent !important;
+	COLOR: #999 !important
+}
+
+.hmenu .disabled:hover UL {
+	DISPLAY: none !important
+}
+
+.vmenu .disabled:hover UL {
+	DISPLAY: none !important
+}
+
+.menuseparator {
+	BORDER-TOP: #eee 2px groove
+}

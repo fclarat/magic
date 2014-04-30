@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>TESTEANDO</title>
+<link rel="stylesheet" href="css/estilos.css" type="text/css"
+	media="screen" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.1.7.js"></script>
+<script
+	src="http://threedubmedia.com/inc/js/jquery.event.drag-2.0.min.js"></script>
+<script
+	src="http://threedubmedia.com/inc/js/jquery.event.drop-2.0.min.js"></script>
+<script src="http://threedubmedia.com/inc/js/excanvas.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="sectorSuperior">
+	<div id="mesa-contrario">
+
+	</div>
+
+	<div id="mesa">
+
+	</div>
+	<div id="cartaZoom">
+		
+	</div>
+</div>
+
+<div id="sectorInferior">
+	<div id="mano">
+
+	</div>
+	<div id="sectorInferiorIzq">	
+		<div id="mazo">
+
+		</div>
+		<div id="cementerio">
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+	var nuevaCarta = 'images/mago.jpg';
+	var usuario = -1; // Guarda el usuario.
+	
+	
+	//pido el mazo (y le paso cual quiero...-Falta- )
+	$.ajax({
+			type: "POST",
+			url: "pedirmazo.php",
+			data:"2",
+			success: function(msg){
+				usuario=msg; //guardo el user
+
+			}
+		});
+		
+	$('.carta').live('mouseover mouseout', function(event) {  //Pongo en el div cartaZoom la imagen por donde el mouse pase, para que la vea en grande...
+		if (event.type == 'mouseover') {
+			$('#cartaZoom').css('backgroundImage','url(' + $(this).attr('src') +')');
+			$('#cartaZoom').css('backgroundRepeat','no-repeat');
+			$('#cartaZoom').css('backgroundPosition','top center');
+		} else {
+			$('#cartaZoom').css('backgroundImage','url( )');
+		}
+	});
+	
+	
+	$(".cartaMesa").live('dblclick', function() {
+		$(this).removeClass('cartaMesa');
+		$(this).addClass('cartaMesaGirada');
+		$(this).rotateAnimation(90);
+	});
+	$(".cartaMano").live('dblclick', function() {
+		//alert("bajar");
+			$(this).removeClass('cartaMano');
+			$(this).addClass('cartaMesa');
+			$(this).addClass('drag');
+			$("#mesa").append($(this));
+		});
+	$(".cartaMesaGirada").live('dblclick', function() {
+		$(this).removeClass('cartaMesaGirada');
+		$(this).addClass('cartaMesa');
+		$(this).rotateAnimation(0);
+	});
+	$(".cartaManoMazo").live('dblclick', function() {		
+		$.ajax({
+			type: "POST",
+			url: "pedircarta.php",
+			data:"usuario="+usuario,
+			success: function(msg){
+			nuevaCarta = msg;
+			$('<img src="'+nuevaCarta+'" class="cartaMano carta" />').appendTo('#mano');
+			}
+		});
+			
+			
+		});
+	
+	var $div = $('#mesa');
+	$('.drag').live("drag",
+			function(ev, dd) {
+				dd.limit = $div.offset();
+				dd.limit.bottom = dd.limit.top + $div.outerHeight()
+						- $(this).outerHeight();
+				dd.limit.right = dd.limit.left + $div.outerWidth()
+						- $(this).outerWidth();
+			}).live("drag",
+			function(ev, dd) {
+				$(this ).css({
+							top : Math.min(dd.limit.bottom, Math.max(
+									dd.limit.top, dd.offsetY)),
+							left : Math.min(dd.limit.right, Math.max(
+									dd.limit.left, dd.offsetX))
+						});
+			});
+
+setTimeout('Actualizar()',4000)
+
+function Actualizar() 
+{
+
+	function pedirposicion()
+	{
+		var pos = $(this).css('top');
+		if (pos != "auto")
+		{
+			pos = pos.substring(0, (pos.length)-2);
+		}
+		return pos - 250;
+	}
+
+	$.ajax({
+			type: "POST",
+			url: "actualizartablero.php",
+			data: "tiene="+ $('#mesa').html()+"&usuario="+usuario,
+			success: function(msg){
+			//alert(msg);
+			document.getElementById('mesa-contrario').innerHTML = msg;
+			$("#mesa-contrario > *").css('top',pedirposicion);
+			//alert(usuario);
+			}
+	});
+
+	//alert([0]);
+	setTimeout('Actualizar()',800)
+}
+
+</script>
+
+
+</body>
+</html>

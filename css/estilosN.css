@@ -1,0 +1,81 @@
+.cartaMano {
+	height: 190px;
+	width: 130px;
+}
+.cartaManoMazo{
+	height: 190px;
+	width: 130px;
+}
+
+.cartaMesa {
+	height: 90px;
+	width: 65px;
+}
+.cartaMesa-contrario{
+	position:relative;
+	top:-250px;
+}
+
+.cartaMesaGirada {
+	height: 90px;
+	width: 65px;
+}
+
+/*
+.cartaMesa:hover{
+	height: 80%;
+	z-index: 5;
+}*/
+#sectorSuperior {
+	height: 500px;
+	width:100%;
+	background-image: url('../images/fondomesa.png');
+}
+#mesa{
+	height: 250px;
+	width: 75%;
+}
+#mesa-contrario{
+	
+	height: 250px;
+	width: 75%;
+}
+#cartaZoom{
+	position:absolute;
+	height: 500px;
+	width: 25%;
+	right:10px;
+	top:10px;
+}
+#mano {
+	height: 200px;
+	width: 75%;
+	float: left;
+}
+
+#mazo {
+	float:left;
+	height: 190px;
+	width: 130px;
+	
+}
+#cementerio {
+	float:left;
+	height: 190px;
+	width: 130px;
+	background-color:#333333;
+}
+#sectorInferiorIzq{
+	height: 200px;
+	width: 25%;
+	float: left;
+}
+#sectorInferior{
+	display: block;
+	width: 100%;
+	padding-top: 1%;
+}
+.drag {
+	position: absolute;	
+	cursor: move;	
+}

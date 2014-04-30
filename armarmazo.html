@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Armar deck</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		
+	</head>
+	<body>
+	<style type="text/css">
+		#divLista{
+			float:left;
+			width: 350px;
+		}
+		#divDeck{
+			float:left;
+			width: 350px;
+		}
+	
+	</style>
+	<div id="divLista">
+		
+		Seleccionar Set<select id="selectSet" >
+		<option value="%"> Todos </option>
+		</select>
+		<br/>
+		<select id="selectLista" size="30">
+		</select>
+		<br/>
+		<input id="addOne" type="button" value=">" />
+		<input id="addFour" type="button" value=">>>>" />
+	</div>
+	
+	<form method="get" action="php/guardarmazo.php">
+	Nombre: <input id="nombre" name="nombre"  />
+	<div id="divDeck">
+		<select name="lista" id="selectDeck" size="30">
+		</select>
+		<br/>
+		<input id="remove" type="button" value="<" />
+		
+	</div>
+	<input type="button" id="guardarDeck" value="Guardar" />
+	</form>
+	<p id="haciendo"> </p>
+	
+	
+	
+
+
+	
+	
+	
+	</body>
+	<script type="text/javascript" src="js/armarmazo.js"></script>
+</html>
